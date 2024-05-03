@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    padding: 10px;
+    height: 300px; 
+    width: 100%;
+    background-color: yellow;
+  }
+  
+  .preto {
+    background-color: black;
+    grid-area: p;
+  }
+  
+  .branco {
+    background-color: white;
+    grid-area: b;
+  }
+  
+  @media screen and (max-width: 1023.98px) {
+    #container {
+      grid-template-areas:
+        "p p . ."
+        "p p . ."
+        ". b b b";
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    #container {
+      grid-template-areas:
+        "p p p p"
+        ". . . ."
+        "b b b b";
+    }
+  }
